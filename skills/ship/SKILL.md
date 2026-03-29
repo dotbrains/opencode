@@ -1,11 +1,11 @@
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 name: ship
 description: Use when the user wants to commit, push, and open a pull request for the current changes. Stages relevant files, writes a descriptive commit message, pushes the branch, opens a PR against main, and posts an /oc review comment so opencode automatically reviews and approves if ready.
 ---
-
 # Ship
 
-Commits staged changes, pushes the branch, opens a PR, and triggers an automated opencode review.
+Commits staged changes, pushes the branch, and opens a PR.
 
 ## When to Use This Skill
 
@@ -101,20 +101,11 @@ EOF
 
 Capture the PR URL from the output.
 
-### Step 7 — Trigger opencode review
-
-Post the review comment on the PR so the opencode GitHub Action picks it up:
-
-```bash
-gh pr comment <PR number> --body "/oc please review this PR and approve if you find it ready to merge"
-```
-
-### Step 8 — Report back
+### Step 7 — Report back
 
 Tell the user:
 - The commit hash and message
 - The PR URL
-- That the opencode review has been triggered
 
 ## Rules
 
@@ -123,3 +114,13 @@ Tell the user:
 - **Always rebase** onto `origin/main` before pushing to minimise conflicts
 - If `gh` is not authenticated, tell the user to run `gh auth login` first
 - If the build/tests are known to exist (e.g. `go build ./...`, `npm test`), run them before committing and abort if they fail
+
+### Step 8 — Trigger opencode review
+
+Post the review comment on the PR so the opencode GitHub Action picks it up:
+
+```bash
+gh pr comment <PR number> --body "/oc please review this PR and approve if you find it ready to merge"
+```
+
+Update the report to also tell the user that the opencode review has been triggered.

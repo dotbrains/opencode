@@ -1,3 +1,4 @@
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 description: >-
   Use this agent when you need comprehensive test coverage for code changes,

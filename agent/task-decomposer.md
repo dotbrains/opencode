@@ -1,3 +1,4 @@
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 model: "opencode/big-pickle"
 description: >-

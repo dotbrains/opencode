@@ -1,0 +1,24 @@
+description: >-
+  Use this agent when the Builder needs precise, well-defined requirements
+  before implementing a feature or task. This agent transforms vague or
+  incomplete task descriptions into actionable specifications with clear
+  acceptance criteria, user stories, and identified edge cases. Examples:
+  <example> Context: The user is creating a requirements-clarifier agent that
+  should be called when a task needs clarification before implementation. user:
+  "Build me a user authentication system" assistant: "I'll delegate this to the
+  requirements-clarifier agent to get clear specifications first." <commentary>
+  Since the task is vague and needs clarification, use the
+  requirements-clarifier agent to define precise requirements before any code is
+  written. </commentary> assistant: "Now let me use the requirements-clarifier
+  agent to define the specifications" </example> <example> Context: User is
+  creating an agent to clarify requirements before implementation. user: "Add a
+  payment feature" assistant: "I'm going to use the Task tool to launch the
+  requirements-clarifier agent to define the payment feature specifications"
+  <commentary> Since the payment feature description is too broad, use the
+  requirements-clarifier agent to break it down into user stories, acceptance
+  criteria, and edge cases. </commentary> </example>
+mode: subagent
+tools:
+  write: false
+  edit: false
+  bash: false

@@ -1,0 +1,79 @@
+description: >-
+  Use this agent when you need a senior AI developer to orchestrate complex
+  development workflows, break down ambiguous user requests into actionable
+  steps, and coordinate multiple specialist agents. This agent serves as the
+  central coordinator that decides when to handle tasks directly versus
+  delegating to domain specialists.
+
+
+  <example>
+
+  Context: The user has a complex feature request that needs requirements
+  clarification, architectural decisions, implementation, and testing.
+
+  user: "I need a new user authentication system with OAuth2, MFA, and session
+  management"
+
+  assistant: "I'll use the tech-lead agent to orchestrate this complex
+  request across multiple specialists"
+
+  <commentary>
+
+  This is a complex multi-phase request requiring requirements clarification,
+  architecture design, implementation, and testing. The tech-lead agent
+  should coordinate the full workflow.
+
+  </commentary>
+
+  assistant: "Now launching tech-lead to coordinate this effort"
+
+  </example>
+
+
+  <example>
+
+  Context: User asks for a feature but requirements are vague and need
+  clarification before proceeding.
+
+  user: "Build me a notification system"
+
+  assistant: "I'll delegate this to the tech-lead to assess if we need
+  requirements clarification first"
+
+  <commentary>
+
+  The request is vague and could benefit from structured requirements gathering
+  before implementation. The tech-lead will determine if @requirements-clarifier
+  should be engaged.
+
+  </commentary>
+
+  assistant: "Let me engage tech-lead to properly scope this notification
+  system"
+
+  </example>
+
+
+  <example>
+
+  Context: User has provided clear requirements and code is being written, now
+  needs coordination of testing and review.
+
+  user: "Here's the implementation of the payment processing module [code
+  provided]"
+
+  assistant: "I'll use tech-lead to coordinate testing and final quality review for
+  this critical component"
+
+  <commentary>
+
+  Implementation exists but needs validation and review. The tech-lead will
+  orchestrate @test-automation-engineer and a final quality pass in sequence.
+
+  </commentary>
+
+  assistant: "Engaging tech-lead to manage the quality assurance pipeline"
+
+  </example>
+model: opencode/claude-opus-4-6
+mode: primary
