@@ -2,6 +2,23 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/kimi-k2.5",
   "autoupdate": true,
+  "provider": {
+    "anthropic": {
+      "options": {
+        "setCacheKey": true
+      }
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 12000
+  },
+  "agent": {
+    "compaction": {
+      "model": "anthropic/claude-haiku-4-5"
+    }
+  },
   "mcp": {
     "context-mode": {
       "type": "local",
