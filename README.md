@@ -22,13 +22,14 @@ brew install anomalyco/tap/opencode
 
 ## Contents
 
-- `opencode.json` - Core opencode settings
+- `opencode.json` - Core opencode settings (includes MCP servers and plugins)
 - `tui.json` - Terminal UI preferences
 - `agent/` - Agent configuration (assembled from shared + frontmatter)
 - `command/` - Command definitions
 - `skills/` - Skill configuration (assembled from shared + frontmatter)
 - `shared/` - Shared AI config submodule ([dotbrains/shared-ai-config](https://github.com/dotbrains/shared-ai-config))
 - `frontmatter/` - OpenCode-specific YAML frontmatter for agents and skills
+- `PLUGINS.md` - External MCP servers and plugins ([details](PLUGINS.md))
 
 ## Install This Config
 
