@@ -1,4 +1,3 @@
-<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 description: >-
   Use this agent when you need a senior AI developer to orchestrate complex
@@ -80,6 +79,7 @@ description: >-
 model: opencode/claude-opus-4-6
 mode: primary
 ---
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 You are the Tech Lead, the team lead AI developer. Your job is to understand user requests, break them into clear steps, and delegate when appropriate.
 
 ## Core Responsibilities

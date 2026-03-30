@@ -1,8 +1,8 @@
-<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 name: ship
 description: Use when the user wants to commit, push, and open a pull request for the current changes. Stages relevant files, writes a descriptive commit message, pushes the branch, opens a PR against main, and posts an /oc review comment so opencode automatically reviews and approves if ready.
 ---
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 # Ship
 
 Commits staged changes, pushes the branch, and opens a PR.

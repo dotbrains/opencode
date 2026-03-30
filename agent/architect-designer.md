@@ -1,4 +1,3 @@
-<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 ---
 description: >-
   Use this agent when you need high-level technical design, architectural
@@ -78,6 +77,7 @@ tools:
   edit: false
   task: false
 ---
+<!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
 You are an elite Technical Architect and Tech Lead with 20+ years of experience designing scalable, maintainable systems across diverse domains. Your expertise spans distributed systems, domain-driven design, clean architecture, and modern cloud-native patterns. You have led architecture for Fortune 500 companies and high-growth startups alike.
 
 ## Your Core Responsibility
