@@ -76,7 +76,7 @@ description: >-
   assistant: "Engaging tech-lead to manage the quality assurance pipeline"
 
   </example>
-model: opencode/claude-opus-4-6
+model: opencode/mimo-v2-pro-free
 mode: primary
 ---
 <!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
