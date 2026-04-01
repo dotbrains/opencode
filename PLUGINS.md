@@ -2,6 +2,36 @@
 
 This document lists the external MCP servers and plugins used by this OpenCode configuration.
 
+## Linear
+
+**Type:** Remote MCP (OAuth)
+
+Linear's official MCP server for issue tracking, project management, and team workflows.
+
+- **URL:** `https://mcp.linear.app/mcp`
+- **Auth:** Run `opencode mcp auth linear` to complete the browser-based OAuth flow
+
+### Verify
+
+```
+opencode mcp list
+```
+
+## Notion
+
+**Type:** Remote MCP (OAuth)
+
+Notion's official hosted MCP server for reading and writing workspace content.
+
+- **URL:** `https://mcp.notion.com/mcp`
+- **Auth:** Run `opencode mcp auth notion` to complete the browser-based OAuth flow
+
+### Verify
+
+```
+opencode mcp list
+```
+
 ## context-mode
 
 **Repository:** [mksglu/context-mode](https://github.com/mksglu/context-mode)
