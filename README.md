@@ -29,7 +29,9 @@ brew install anomalyco/tap/opencode
 - `skills/` - Skill configuration (assembled from shared + frontmatter)
 - `shared/` - Shared AI config submodule ([dotbrains/shared-ai-config](https://github.com/dotbrains/shared-ai-config))
 - `frontmatter/` - OpenCode-specific YAML frontmatter for agents and skills
+- `rules/` - Instruction files loaded as system-level rules
 - `PLUGINS.md` - External MCP servers and plugins ([details](PLUGINS.md))
+- `RULES.md` - Rule definitions and usage ([details](RULES.md))
 
 ## Install This Config
 
