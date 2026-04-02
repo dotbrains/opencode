@@ -36,5 +36,5 @@
     }
   },
   "plugin": ["context-mode"],
-  "instructions": ["rules/no-coauthor.md"]
+  "instructions": ["rules/no-coauthor.md", "rules/cli-projects.md"]
 }
