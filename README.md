@@ -43,6 +43,19 @@ The contents of this repository should be placed in your `$HOME/.config`.
 git clone --recursive https://github.com/dotbrains/opencode.git $HOME/.config/opencode
 ```
 
+### Install Plugins
+
+After cloning, run the plugin installation script:
+
+```bash
+./install-plugins.sh
+```
+
+This installs:
+- `context-mode` - MCP server for context management
+- `@dotbrains/linear-cli` - Fallback CLI for Linear
+- `@dotbrains/notion-cli` - Fallback CLI for Notion
+
 ## Shared Agent Definitions
 
 Agent and skill body content is shared with [Claude Code](https://github.com/dotbrains/claude) via the [shared-ai-config](https://github.com/dotbrains/shared-ai-config) submodule. To update after shared content changes:
