@@ -35,6 +35,6 @@
       "enabled": true
     }
   },
-  "plugin": ["context-mode"],
+  "plugin": ["context-mode", "superpowers@git+https://github.com/obra/superpowers.git"],
   "instructions": ["rules/no-coauthor.md", "rules/cli-projects.md"]
 }
