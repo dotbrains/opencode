@@ -32,6 +32,8 @@ brew install anomalyco/tap/opencode
 - `rules/` - Instruction files loaded as system-level rules
 - `PLUGINS.md` - External MCP servers and plugins ([details](PLUGINS.md))
 - `RULES.md` - Rule definitions and usage ([details](RULES.md))
+- `expertise/` - Domain knowledge for multi-team agents
+- `teams.yaml`, `orchestrator.yaml`, `agent-chain.yaml` - Multi-team configuration
 
 ## Install This Config
 
@@ -61,6 +63,65 @@ Setup and usage instructions are documented in `PLUGINS.md` under:
 
 - **Linear → Fallback: linear-cli (when MCP auth is blocked)**
 - **Notion → Fallback: notion-cli (when MCP auth is blocked)**
+
+## Multi-Team Orchestration
+
+This config includes a three-tier multi-team system that replaces the default tech-lead agent. Based on [IndyDevDan's "One Agent Is NOT ENOUGH"](https://www.youtube.com/watch?v=M30gp1315Y4).
+
+### Architecture
+
+```
+Orchestrator Lead (replaces tech-lead)
+├── Planning Team (HIGH tier)
+│   └── planning-lead → planning-agent + plan-reviewer
+├── Engineering Team (MEDIUM tier)
+│   └── engineering-lead → frontend-dev + backend-dev + devops-specialist
+└── Validation Team (MEDIUM tier)
+    └── validation-lead → reviewer + security-reviewer + qa-engineer
+```
+
+### Model Tiers
+
+| Tier | Model | Use For |
+|------|-------|---------|
+| HIGH | mimo-v2-pro-free | Orchestrator, Planning, Architecture |
+| MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
+
+### Usage
+
+1. Select `orchestrator-lead` as your agent
+2. Just type your request
+
+The orchestrator will route to the appropriate teams:
+
+| Request Type | Flow |
+|--------------|------|
+| New feature | Planning → Engineering → Validation |
+| Bug fix | Engineering → Validation |
+| Code review | Validation only |
+| Architecture | Planning only |
+| Security audit | Validation (security focus) |
+
+### Skills
+
+You can also invoke skills directly:
+
+- `@mt-feature` — Full lifecycle for new features
+- `@mt-review` — Quick code review
+- `@mt-audit` — Deep security audit
+- `@mt-fix` — Bug fix workflow
+- `@mt-lookup` — Code exploration/understanding
+
+### Configuration Files
+
+- `teams.yaml` - Team member definitions
+- `orchestrator.yaml` - Routing rules, model tiers, team configs
+- `agent-chain.yaml` - Sequential pipelines
+- `expertise/` - Domain knowledge per team
+
+For detailed documentation, see:
+- [MULTI-TEAM.md](MULTI-TEAM.md) - Full system documentation
+- [EXPERTISE.md](EXPERTISE.md) - Domain knowledge per team
 
 ## License
 

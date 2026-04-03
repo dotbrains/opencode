@@ -1,0 +1,60 @@
+# Sequential Agent Chains for opencode
+# $INPUT = previous step output, $ORIGINAL = user's original prompt
+
+chains:
+  full-lifecycle:
+    description: "Full lifecycle — plan, engineer, validate"
+    model-tier: high
+    steps:
+      - agent: planning-lead
+        model-tier: high
+        prompt: "Coordinate your team to create an implementation plan for: $INPUT"
+      - agent: engineering-lead
+        model-tier: medium
+        prompt: "Based on this plan, coordinate your engineering team to implement: $INPUT"
+      - agent: validation-lead
+        model-tier: medium
+        prompt: "Validate this implementation for correctness, security, and quality: $INPUT"
+
+  engineer-validate:
+    description: "Implement and validate — skip planning"
+    model-tier: medium
+    steps:
+      - agent: engineering-lead
+        model-tier: medium
+        prompt: "Coordinate your engineering team to implement: $INPUT"
+      - agent: validation-lead
+        model-tier: medium
+        prompt: "Validate this implementation: $INPUT"
+
+  plan-validate:
+    description: "Plan and validate"
+    model-tier: high
+    steps:
+      - agent: planning-lead
+        model-tier: high
+        prompt: "Create an architecture design for: $INPUT"
+      - agent: validation-lead
+        model-tier: medium
+        prompt: "Review this architecture for feasibility and security: $INPUT"
+
+  security-audit:
+    description: "Deep security audit"
+    model-tier: medium
+    steps:
+      - agent: validation-lead
+        model-tier: medium
+        prompt: "Perform a comprehensive security audit: $INPUT"
+
+# Chain Selection Rules
+# Maps task type to recommended chain
+
+chain-selection:
+  new_feature: full-lifecycle
+  complex_task: full-lifecycle
+  bug_fix: engineer-validate
+  minor_change: engineer-validate
+  architecture_review: plan-validate
+  design_approval: plan-validate
+  security_concern: security-audit
+  penetration_test: security-audit

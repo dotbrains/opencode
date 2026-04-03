@@ -1,0 +1,12 @@
+description: >-
+  Use this agent as the top-level coordinator for complex multi-team workflows.
+  This agent replaces tech-lead and orchestrates the three-tier system: Planning →
+  Engineering → Validation.
+
+  <example>
+  Context: User requests a new feature with unclear requirements.
+  user: "Build me a real-time collaboration system"
+  assistant: "I'll use orchestrator-lead to coordinate planning, engineering, and validation teams"
+  </example>
+model: opencode/mimo-v2-pro-free
+mode: primary

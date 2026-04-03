@@ -1,0 +1,85 @@
+# Orchestrator Configuration for opencode
+
+# ── Model Tiers ─────────────────────────────────────
+#
+# Cost optimization: route different complexity prompts to different models.
+# Higher tiers = more capable but more expensive.
+
+model-tiers:
+  high:
+    model: "opencode/mimo-v2-pro-free"
+    teams: "orchestrator, planning"
+    description: "Complex reasoning, architecture, planning"
+  
+  medium:
+    model: "opencode/kimi-k2.5"
+    teams: "engineering, validation"
+    description: "Implementation, testing, code review"
+  
+  low:
+    model: "opencode/kimi-k2.5"
+    teams: "quick-lookup, simple-tasks"
+    description: "Lookups, formatting, classification"
+
+# ── Team Definitions ───────────────────────────────
+
+teams:
+  engineering:
+    lead: engineering-lead
+    workers:
+      - frontend-dev
+      - backend-dev
+      - devops-specialist
+    description: "Full-stack engineering — implements features"
+    model-tier: medium
+
+  planning:
+    lead: planning-lead
+    workers:
+      - planning-agent
+      - plan-reviewer
+    description: "Architecture and planning — plans and critiques"
+    model-tier: high
+
+  validation:
+    lead: validation-lead
+    workers:
+      - reviewer
+      - security-reviewer
+      - qa-engineer
+    description: "Quality assurance — reviews, security, testing"
+    model-tier: medium
+
+# ── Routing Rules ───────────────────────────────────
+
+routing:
+  new-feature:
+    - planning
+    - engineering
+    - validation
+  bug-fix:
+    - engineering
+    - validation
+  code-review:
+    - validation
+  architecture:
+    - planning
+  security-audit:
+    - validation
+  quick-lookup:
+    - engineering
+
+# ── Preprocessing ───────────────────────────────────
+
+preprocess:
+  # Requirements clarifier is always called first for these task types
+  always_clarify:
+    - new_feature
+    - unclear_requirements
+    - ambiguous_task
+
+  # For these, go straight to relevant team
+  skip_clarify:
+    - bug_fix
+    - code_review
+    - quick_lookup

@@ -1,0 +1,4 @@
+name: mt-feature
+description: >-
+  Run the full multi-team lifecycle: planning → engineering → validation.
+  Use for new features that need architecture, implementation, and validation.

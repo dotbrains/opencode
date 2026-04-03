@@ -1,0 +1,6 @@
+description: >-
+  Backend implementation specialist - writes clean, idiomatic backend code.
+model: opencode/mimo-v2-pro-free
+mode: subagent
+tools:
+  task: false

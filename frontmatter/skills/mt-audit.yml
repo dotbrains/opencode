@@ -1,0 +1,4 @@
+name: mt-audit
+description: >-
+  Run a deep security audit using the validation team with security focus.
+  Use for vulnerability scanning, penetration testing, and security reviews.

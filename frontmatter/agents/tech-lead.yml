@@ -1,9 +1,9 @@
+# DEPRECATED - Replaced by orchestrator-lead
+# Keeping this file to maintain backward compatibility during transition
+enabled: false
 description: >-
-  Use this agent when you need a senior AI developer to orchestrate complex
-  development workflows, break down ambiguous user requests into actionable
-  steps, and coordinate multiple specialist agents. This agent serves as the
-  central coordinator that decides when to handle tasks directly versus
-  delegating to domain specialists.
+  DEPRECATED: Use orchestrator-lead instead. This agent is kept for
+  backward compatibility but is no longer actively maintained.
 
 
   <example>

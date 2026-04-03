@@ -1,0 +1,4 @@
+name: mt-lookup
+description: >-
+  Run a quick exploration/lookup using the engineering team.
+  Use for understanding code, answering questions about the codebase.
