@@ -144,11 +144,14 @@ Restart OpenCode to load the plugin.
 
 ### Usage
 
+Use OpenCode's native `skill` tool:
+
 ```
+use skill tool to list skills
 use skill tool to load superpowers/brainstorming
 ```
 
-Verify by asking: "Tell me about your superpowers"
+Or simply ask: "Tell me about your superpowers"
 
 ## Get Shit Done (GSD)
 

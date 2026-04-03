@@ -15,6 +15,14 @@ fi
 echo "Installing context-mode..."
 npm install -g context-mode
 
+# superpowers - Complete software development workflow
+# Already configured in opencode.json via plugin array
+echo "superpowers is configured in opencode.json (no install needed)"
+
+# get-shit-done - GSD workflow system
+echo "Installing get-shit-done..."
+npx get-shit-done-cc@latest --opencode --global
+
 # linear-cli - fallback for Linear (requires GitHub registry)
 echo "Installing linear-cli..."
 npm config set @dotbrains:registry https://npm.pkg.github.com

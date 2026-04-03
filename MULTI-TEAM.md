@@ -45,6 +45,16 @@ The orchestrator will automatically route to the appropriate teams:
 | Security audit | Validation (security focus) |
 | Quick lookup | Direct or Engineering |
 
+### 3. Using Skills Directly
+
+You can also invoke skills directly using the `skill` tool:
+
+```
+use skill tool to list skills
+use skill tool to load mt-feature
+use skill tool to load mt-review
+```
+
 ## Agent Reference
 
 ### Orchestrator Lead
