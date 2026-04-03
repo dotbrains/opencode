@@ -28,20 +28,9 @@ This is included in the opencode config at `~/.config/opencode/`. No separate in
 
 ## Usage
 
-### 1. Start with the default build agent
+### 1. Default: orchestrator-lead
 
-When you start opencode, you begin with the `build` agent by default.
-
-### 2. Invoke orchestrator-lead as a subagent
-
-To use the multi-team orchestration, invoke `orchestrator-lead` as a subagent:
-
-```
-@orchestrator-lead
-Build me a user authentication system with OAuth2
-```
-
-The orchestrator will automatically route to the appropriate teams:
+When you start OpenCode, the default agent is now `orchestrator-lead`. This agent automatically routes to the appropriate teams:
 
 | Request Type | Flow |
 |--------------|------|
@@ -51,6 +40,10 @@ The orchestrator will automatically route to the appropriate teams:
 | Architecture | Planning only |
 | Security audit | Validation (security focus) |
 | Quick lookup | Direct or Engineering |
+
+### 2. Switch agents with Tab
+
+Use the **Tab** key to cycle between primary agents if needed.
 
 ### 3. Using Skills Directly
 

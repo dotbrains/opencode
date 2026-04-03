@@ -104,15 +104,7 @@ Orchestrator Lead
 
 ### Usage
 
-1. Start with the default `build` agent
-2. Invoke `orchestrator-lead` as a subagent for multi-team workflows:
-
-```
-@orchestrator-lead
-Build me a user authentication system with OAuth2
-```
-
-The orchestrator will route to the appropriate teams:
+By default, OpenCode now starts with `orchestrator-lead` as the primary agent. This agent coordinates the multi-team system:
 
 | Request Type | Flow |
 |--------------|------|
@@ -121,6 +113,8 @@ The orchestrator will route to the appropriate teams:
 | Code review | Validation only |
 | Architecture | Planning only |
 | Security audit | Validation (security focus) |
+
+You can also switch agents using the **Tab** key to cycle between primary agents.
 
 ### Skills
 
