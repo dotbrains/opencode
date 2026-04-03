@@ -85,7 +85,7 @@ Orchestrator Lead
 | Tier | Model | Use For |
 |------|-------|---------|
 | HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
-| MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
+| MEDIUM | minimax-m2.5-free | Engineering, Validation, Code Review |
 
 ### Usage
 

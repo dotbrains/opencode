@@ -78,7 +78,7 @@ The orchestrator will automatically route to the appropriate teams:
 | backend-dev | API/backend implementation |
 | devops-specialist | Infrastructure/deployment |
 
-**Model:** MEDIUM (kimi-k2.5)
+**Model:** MEDIUM (minimax-m2.5-free)
 
 ### Validation Team
 
@@ -89,7 +89,7 @@ The orchestrator will automatically route to the appropriate teams:
 | security-reviewer | Security audits |
 | qa-engineer | Test automation |
 
-**Model:** MEDIUM (kimi-k2.5)
+**Model:** MEDIUM (minimax-m2.5-free)
 
 ## Skills
 
@@ -163,7 +163,7 @@ Domain knowledge per team:
 | Tier | Model | Use For |
 |------|-------|---------|
 | HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
-| MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
+| MEDIUM | minimax-m2.5-free | Engineering, Validation, Code Review |
 
 Cost optimization: don't pay for intelligence you don't need.
 
