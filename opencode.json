@@ -2,6 +2,11 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/minimax-m2.5-free",
   "autoupdate": true,
+  "permission": {
+    "skill": {
+      "*": "allow"
+    }
+  },
   "provider": {
     "anthropic": {
       "options": {
