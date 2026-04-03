@@ -7,17 +7,17 @@
 
 model-tiers:
   high:
-    model: "opencode/mimo-v2-pro-free"
+    model: "opencode/minimax-m2.5-free"
     teams: "orchestrator, planning"
     description: "Complex reasoning, architecture, planning"
   
   medium:
-    model: "opencode/kimi-k2.5"
+    model: "opencode/minimax-m2.5-free"
     teams: "engineering, validation"
     description: "Implementation, testing, code review"
   
   low:
-    model: "opencode/kimi-k2.5"
+    model: "opencode/minimax-m2.5-free"
     teams: "quick-lookup, simple-tasks"
     description: "Lookups, formatting, classification"
 

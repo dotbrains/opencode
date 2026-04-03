@@ -2,7 +2,7 @@
 description: >-
   Planning team lead - coordinates planning and architecture work.
   Receives tasks from orchestrator, delegates to planning-agent and plan-reviewer.
-model: opencode/mimo-v2-pro-free
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   task: true

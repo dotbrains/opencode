@@ -1,7 +1,7 @@
 ---
 description: >-
   Frontend implementation specialist - writes clean, idiomatic frontend code.
-model: opencode/mimo-v2-pro-free
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   task: false

@@ -1,7 +1,7 @@
 ---
 description: >-
   Security specialist - performs security audits and vulnerability scanning.
-model: opencode/mimo-v2-pro-free
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   task: false

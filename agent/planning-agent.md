@@ -2,7 +2,7 @@
 description: >-
   High-level technical design and architectural decisions.
   Produces design documents, pattern selections, and structural recommendations.
-model: opencode/mimo-v2-pro-free
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   bash: false

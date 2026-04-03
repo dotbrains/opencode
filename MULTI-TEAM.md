@@ -57,7 +57,7 @@ The orchestrator will automatically route to the appropriate teams:
 - Synthesize results from all teams
 - Final quality gate before delivery
 
-**Model:** HIGH (mimo-v2-pro-free)
+**Model:** HIGH (minimax-m2.5-free)
 
 ### Planning Team
 
@@ -67,7 +67,7 @@ The orchestrator will automatically route to the appropriate teams:
 | planning-agent | Creates architecture/design |
 | plan-reviewer | Reviews plans for completeness |
 
-**Model:** HIGH (mimo-v2-pro-free)
+**Model:** HIGH (minimax-m2.5-free)
 
 ### Engineering Team
 
@@ -162,7 +162,7 @@ Domain knowledge per team:
 
 | Tier | Model | Use For |
 |------|-------|---------|
-| HIGH | mimo-v2-pro-free | Orchestrator, Planning, Architecture |
+| HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
 | MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
 
 Cost optimization: don't pay for intelligence you don't need.

@@ -9,7 +9,7 @@ description: >-
   user: "Build me a real-time collaboration system"
   assistant: "I'll use orchestrator-lead to coordinate planning, engineering, and validation teams"
   </example>
-model: opencode/mimo-v2-pro-free
+model: opencode/minimax-m2.5-free
 mode: primary
 ---
 <!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
@@ -35,7 +35,7 @@ You (Orchestrator Lead)
 
 | Tier | Model | Use For |
 |------|-------|---------|
-| HIGH | mimo-v2-pro-free | Orchestrator, Planning, Architecture |
+| HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
 | MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
 
 Route tasks to appropriate team tiers based on complexity.
