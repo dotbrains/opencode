@@ -66,12 +66,12 @@ Setup and usage instructions are documented in `PLUGINS.md` under:
 
 ## Multi-Team Orchestration
 
-This config includes a three-tier multi-team system that replaces the default tech-lead agent. Based on [IndyDevDan's "One Agent Is NOT ENOUGH"](https://www.youtube.com/watch?v=M30gp1315Y4).
+This config includes a three-tier multi-team system for opencode. Based on [IndyDevDan's "One Agent Is NOT ENOUGH"](https://www.youtube.com/watch?v=M30gp1315Y4).
 
 ### Architecture
 
 ```
-Orchestrator Lead (replaces tech-lead)
+Orchestrator Lead
 ├── Planning Team (HIGH tier)
 │   └── planning-lead → planning-agent + plan-reviewer
 ├── Engineering Team (MEDIUM tier)

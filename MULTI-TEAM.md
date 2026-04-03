@@ -5,7 +5,7 @@ Three-tier multi-team agent orchestration for opencode. Based on [IndyDevDan's "
 ## Architecture
 
 ```
-Orchestrator Lead (replaces tech-lead)
+Orchestrator Lead
 ├── Planning Team (HIGH tier)
 │   ├── Planning Lead
 │   ├── Planning Agent
@@ -49,7 +49,7 @@ The orchestrator will automatically route to the appropriate teams:
 
 ### Orchestrator Lead
 
-**Role:** Top-level coordinator - replaces tech-lead
+**Role:** Top-level coordinator
 
 **Responsibilities:**
 - Analyze requests and determine complexity
@@ -166,10 +166,6 @@ Domain knowledge per team:
 | MEDIUM | kimi-k2.5 | Engineering, Validation, Code Review |
 
 Cost optimization: don't pay for intelligence you don't need.
-
-## Migration from tech-lead
-
-The `orchestrator-lead` replaces `tech-lead` as the primary agent. Old references to `tech-lead` will still work but are deprecated.
 
 ## Examples
 

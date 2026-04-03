@@ -1,7 +1,7 @@
 ---
 description: >-
   Use this agent as the top-level coordinator for complex multi-team workflows.
-  This agent replaces tech-lead and orchestrates the three-tier system: Planning →
+  This agent orchestrates the three-tier system: Planning →
   Engineering → Validation.
 
   <example>
