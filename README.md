@@ -104,13 +104,13 @@ The orchestrator will route to the appropriate teams:
 
 ### Skills
 
-You can also invoke skills directly:
+You can also invoke skills directly using the `@skills/` prefix:
 
-- `@mt-feature` — Full lifecycle for new features
-- `@mt-review` — Quick code review
-- `@mt-audit` — Deep security audit
-- `@mt-fix` — Bug fix workflow
-- `@mt-lookup` — Code exploration/understanding
+- `@skills/mt-feature` — Full lifecycle for new features
+- `@skills/mt-review` — Quick code review
+- `@skills/mt-audit` — Deep security audit
+- `@skills/mt-fix` — Bug fix workflow
+- `@skills/mt-lookup` — Code exploration/understanding
 
 ### Configuration Files
 
