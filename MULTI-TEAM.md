@@ -28,11 +28,18 @@ This is included in the opencode config at `~/.config/opencode/`. No separate in
 
 ## Usage
 
-### 1. Select orchestrator-lead as your agent
+### 1. Start with the default build agent
 
-When starting opencode, select `orchestrator-lead` as the primary agent.
+When you start opencode, you begin with the `build` agent by default.
 
-### 2. Just type your request
+### 2. Invoke orchestrator-lead as a subagent
+
+To use the multi-team orchestration, invoke `orchestrator-lead` as a subagent:
+
+```
+@orchestrator-lead
+Build me a user authentication system with OAuth2
+```
 
 The orchestrator will automatically route to the appropriate teams:
 

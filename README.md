@@ -104,8 +104,13 @@ Orchestrator Lead
 
 ### Usage
 
-1. Select `orchestrator-lead` as your agent
-2. Just type your request
+1. Start with the default `build` agent
+2. Invoke `orchestrator-lead` as a subagent for multi-team workflows:
+
+```
+@orchestrator-lead
+Build me a user authentication system with OAuth2
+```
 
 The orchestrator will route to the appropriate teams:
 
