@@ -6,7 +6,7 @@ description: >-
   <example>
   Context: User requests a new feature with unclear requirements.
   user: "Build me a real-time collaboration system"
-  assistant: "I'll use orchestrator-lead to coordinate planning, engineering, and validation teams"
+  assistant: "I'll use orchestrator to coordinate planning, engineering, and validation teams"
   </example>
 model: opencode/minimax-m2.5-free
 mode: primary

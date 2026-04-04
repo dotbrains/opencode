@@ -1,5 +1,5 @@
 # Multi-Team Team Definitions for opencode
-# Used by orchestrator-lead to route tasks to teams
+# Used by orchestrator to route tasks to teams
 
 engineering:
   - engineering-lead
@@ -19,7 +19,7 @@ validation:
   - qa-engineer
 
 multi-team:
-  - orchestrator-lead
+  - orchestrator
   - planning-lead
   - planning-agent
   - plan-reviewer

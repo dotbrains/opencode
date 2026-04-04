@@ -28,9 +28,9 @@ This is included in the opencode config at `~/.config/opencode/`. No separate in
 
 ## Usage
 
-### 1. Default: orchestrator-lead
+### 1. Default: orchestrator
 
-When you start OpenCode, the default agent is now `orchestrator-lead`. This agent automatically routes to the appropriate teams:
+When you start OpenCode, the default agent is now `orchestrator`. This agent automatically routes to the appropriate teams:
 
 | Request Type | Flow |
 |--------------|------|

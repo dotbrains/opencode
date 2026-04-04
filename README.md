@@ -104,7 +104,7 @@ Orchestrator Lead
 
 ### Usage
 
-By default, OpenCode now starts with `orchestrator-lead` as the primary agent. This agent coordinates the multi-team system:
+By default, OpenCode now starts with `orchestrator` as the primary agent. This agent coordinates the multi-team system:
 
 | Request Type | Flow |
 |--------------|------|
