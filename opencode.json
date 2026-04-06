@@ -18,11 +18,11 @@
   "compaction": {
     "auto": true,
     "prune": true,
-    "reserved": 12000
+    "reserved": 25000
   },
   "agent": {
     "compaction": {
-      "model": "anthropic/claude-sonnet-4-20250514"
+      "model": "openai/o4-mini"
     }
   },
   "mcp": {
