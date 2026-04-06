@@ -42,5 +42,5 @@
     }
   },
   "plugin": ["context-mode", "superpowers@git+https://github.com/obra/superpowers.git"],
-  "instructions": ["rules/no-coauthor.md", "rules/cli-projects.md"]
+  "instructions": ["rules/no-coauthor.md", "rules/cli-projects.md", "rules/concise.md"]
 }
