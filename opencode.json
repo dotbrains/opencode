@@ -22,7 +22,7 @@
   },
   "agent": {
     "compaction": {
-      "model": "google/gemini-2.5-pro"
+      "model": "opencode/gpt-5.4"
     }
   },
   "mcp": {
