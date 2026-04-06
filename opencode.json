@@ -22,7 +22,7 @@
   },
   "agent": {
     "compaction": {
-      "model": "openai/o4-mini"
+      "model": "google/gemini-2.5-pro"
     }
   },
   "mcp": {
