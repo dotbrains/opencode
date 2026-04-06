@@ -18,11 +18,11 @@
   "compaction": {
     "auto": true,
     "prune": true,
-    "reserved": 25000
+    "reserved": 40000
   },
   "agent": {
     "compaction": {
-      "model": "opencode/gpt-5.4"
+      "model": "opencode/minimax-m2.5-free"
     }
   },
   "mcp": {
