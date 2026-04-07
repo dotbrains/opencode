@@ -83,3 +83,13 @@ preprocess:
     - bug_fix
     - code_review
     - quick_lookup
+
+# ── Worktree Configuration ───────────────────────────────
+
+worktrees:
+  # Global location for worktrees (outside project directory)
+  location: "~/.config/superpowers/worktrees"
+  # Create worktrees for multi-team workflows
+  enabled: true
+  # Auto-cleanup after completion
+  auto-cleanup: true

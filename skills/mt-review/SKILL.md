@@ -21,6 +21,23 @@ Invoke when the user says things like:
 
 ## Workflow
 
+### Step 0 — Create Worktree (Optional)
+
+For reviewing a branch/PR, create a worktree to isolate the review:
+
+```bash
+# Detect project and branch to review
+project=$(basename "$(git rev-parse --show-toplevel)")
+branch="review/$(echo -e "$TARGET" | head -c 30 | tr ' ' '-' | tr '[:upper:]' '[:lower:]')"
+
+# Create worktree in global location
+mkdir -p "~/.config/superpowers/worktrees/$project"
+git worktree add "~/.config/superpowers/worktrees/$project/$branch" -b "$branch"
+
+# Navigate to worktree
+cd "~/.config/superpowers/worktrees/$project/$branch"
+```
+
 ### Step 1 — Identify What to Review
 
 Clarify what needs review:
@@ -62,6 +79,18 @@ Present the review results clearly:
 - **Don't approve** code you haven't had reviewed
 - **Report honestly** — minor issues are still worth reporting
 - **Provide fixes** — where possible, suggest how to fix issues
+- **Create worktree first** — isolate for PR/branch reviews
+
+## Cleanup
+
+After review completes:
+
+```
+To remove worktree:
+  project=$(basename "$(git rev-parse --show-toplevel)")
+  git worktree remove "~/.config/superpowers/worktrees/$project/review-*"
+  git branch -d "review-*"
+```
 
 ## Severity Guide
 

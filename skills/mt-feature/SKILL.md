@@ -20,6 +20,25 @@ Invoke when the user says things like:
 
 ## Workflow
 
+### Step 0 — Create Worktree
+
+Before starting, create an isolated worktree for this feature:
+
+```bash
+# Detect project and create feature worktree
+project=$(basename "$(git rev-parse --show-toplevel)")
+branch="feature/$(echo -e "$USER_REQUEST" | head -c 50 | tr ' ' '-' | tr '[:upper:]' '[:lower:]')"
+
+# Create worktree in global location
+mkdir -p "~/.config/superpowers/worktrees/$project"
+git worktree add "~/.config/superpowers/worktrees/$project/$branch" -b "$branch"
+
+# Navigate to worktree
+cd "~/.config/superpowers/worktrees/$project/$branch"
+```
+
+**All subsequent steps operate in this worktree.**
+
 ### Step 1 — Delegate to Planning Lead
 
 Dispatch to `@planning-lead` with:
@@ -75,3 +94,21 @@ Combine the results from all three teams into a coherent summary:
 - **Wait for each team** — don't start engineering until planning is done
 - **Report blockers** — if any team fails, explain what needs attention
 - **Synthesize, don't just relay** — combine outputs into narrative
+- **Create worktree first** — always isolate before delegating
+- **Cleanup after completion** — merge or remove worktree when done
+
+## Cleanup
+
+After validation completes:
+
+```
+To merge the feature branch to main:
+  cd "~/.config/superpowers/worktrees/$project/$branch"
+  git checkout main
+  git merge "$branch"
+  git push origin main
+
+To remove worktree (if not merging):
+  git worktree remove "~/.config/superpowers/worktrees/$project/$branch"
+  git branch -d "$branch"
+```

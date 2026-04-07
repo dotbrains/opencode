@@ -66,6 +66,7 @@ Present the answer clearly:
 - **Be accurate** — verify your understanding
 - **Show evidence** — point to specific code
 - **Admit uncertainty** — if you're not sure, say so
+- **Worktree optional** — quick lookups don't need isolation
 
 ## Examples
 

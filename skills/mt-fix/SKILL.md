@@ -21,6 +21,25 @@ Invoke when the user says things like:
 
 ## Workflow
 
+### Step 0 — Create Worktree
+
+Create an isolated worktree for this fix:
+
+```bash
+# Detect project and create fix branch
+project=$(basename "$(git rev-parse --show-toplevel)")
+branch="fix/$(echo -e "$BUG_DESCRIPTION" | head -c 50 | tr ' ' '-' | tr '[:upper:]' '[:lower:]')"
+
+# Create worktree in global location
+mkdir -p "~/.config/superpowers/worktrees/$project"
+git worktree add "~/.config/superpowers/worktrees/$project/$branch" -b "$branch"
+
+# Navigate to worktree
+cd "~/.config/superpowers/worktrees/$project/$branch"
+```
+
+**All subsequent steps operate in this worktree.**
+
 ### Step 1 — Investigate
 
 First, understand the problem:
@@ -86,6 +105,24 @@ Present the fix results:
 - **Verify the fix** — don't just claim it's fixed
 - **Check for regressions** — ensure the fix didn't break something else
 - **Report honestly** — if the fix didn't work, say so
+- **Create worktree first** — always isolate before fixing
+- **Cleanup after completion** — merge or remove worktree when done
+
+## Cleanup
+
+After validation completes:
+
+```
+To merge the fix branch to main:
+  cd "~/.config/superpowers/worktrees/$project/$branch"
+  git checkout main
+  git merge "$branch"
+  git push origin main
+
+To remove worktree (if not merging):
+  git worktree remove "~/.config/superpowers/worktrees/$project/$branch"
+  git branch -d "$branch"
+```
 
 ## Bug Report Template
 

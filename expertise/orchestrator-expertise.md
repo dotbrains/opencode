@@ -48,3 +48,38 @@ Before final delivery, ensure:
 - [ ] Architecture approved (for non-trivial changes)
 - [ ] Implementation completed
 - [ ] Validation passed
+
+## Worktree Management
+
+The orchestrator manages isolated worktrees for multi-team workflows:
+
+### Configuration
+- **Location**: `~/.config/superpowers/worktrees/<project-name>/`
+- **Enabled**: Yes (via orchestrator.yaml)
+- **Auto-cleanup**: Yes
+
+### Worktree Workflow
+
+1. **Create worktree** before starting any multi-team task:
+   ```bash
+   # Detect project name
+   project=$(basename "$(git rev-parse --show-toplevel)")
+   
+   # Create feature branch worktree
+   git worktree add "~/.config/superpowers/worktrees/$project/<branch-name>" -b "<branch-name>"
+   ```
+
+2. **Delegate to teams** using the worktree path as working directory via the `workdir` parameter
+
+3. **Cleanup** after completion:
+   - Merge branch to main, OR
+   - Remove worktree and delete branch
+
+### Why Worktrees Matter
+
+| Problem Without Worktrees | Solution With Worktrees |
+|---------------------------|-------------------------|
+| Context pollution between teams | Each team operates in isolation |
+| Git state conflicts | Each worktree has own git state |
+| Hard to rollback | Easy to delete worktree + branch |
+| Concurrent subagent interference | Sequential isolation per phase |
