@@ -1,5 +1,49 @@
 # Plugins
 This document lists the external MCP servers and plugins used by this OpenCode configuration.
+
+## Warp
+
+**Repository:** [warpdotdev/opencode-warp](https://github.com/warpdotdev/opencode-warp)
+
+Official Warp terminal integration for OpenCode.
+
+### Features
+
+- **Native Notifications** — Get Warp notifications when OpenCode:
+  - Completes a task — summary showing your prompt and response
+  - Needs your input — when a permission request is pending
+  - Runs a tool — status updates as tools execute
+
+Notifications appear in Warp's notification center and as system notifications.
+
+### Installation
+
+The plugin is already configured in `opencode.json`:
+
+```json
+{
+  "plugin": ["@warp-dot-dev/opencode-warp"]
+}
+```
+
+### Requirements
+
+- [Warp terminal](https://warp.dev) (macOS, Linux, or Windows)
+- [OpenCode](https://opencode.ai) CLI
+
+### How It Works
+
+Uses Warp's pluggable notifications feature via OSC escape sequences. Hooks into:
+- `session.created` — confirms plugin is active
+- `session.idle` — fires when OpenCode finishes responding
+- `permission.updated` / `permission.asked` — when tool approval is needed
+- `message.updated` — when user prompt is submitted
+- `tool.execute.after` — when tool call completes
+
+### Uninstall
+
+Remove `"@warp-dot-dev/opencode-warp"` from the `plugin` array in `opencode.json`.
+
 ## Linear
 **Type:** Remote MCP (OAuth)
 Linear's official MCP server for issue tracking, project management, and team workflows.
