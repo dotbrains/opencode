@@ -2,7 +2,7 @@
 description: >-
   High-level technical design and architectural decisions.
   Produces design documents, pattern selections, and structural recommendations.
-model: opencode-go/mimo-v2-pro
+model: opencode/qwen3.6-plus-free
 mode: subagent
 tools:
   bash: false

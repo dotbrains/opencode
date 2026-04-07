@@ -2,7 +2,7 @@
 description: >-
   Reviews and critiques planning artifacts from planning-agent.
   Ensures plans are complete, feasible, and well-structured.
-model: opencode-go/mimo-v2-pro
+model: opencode/qwen3.6-plus-free
 mode: subagent
 tools:
   bash: false

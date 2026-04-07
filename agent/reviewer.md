@@ -1,7 +1,7 @@
 ---
 description: >-
   Code reviewer - performs quality reviews, style checks, and best practice validation.
-model: opencode-go/minimax-m2.5
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   task: false

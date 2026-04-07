@@ -7,19 +7,19 @@
 
 model-tiers:
   planning:
-    model: "opencode-go/mimo-v2-pro"
+    model: "opencode/qwen3.6-plus-free"
     teams: "planning"
-    description: "1M context - cheapest 1M model ($1/1k)"
+    description: "1M context - free, great for architecture"
   
   engineering:
-    model: "opencode-go/minimax-m2.5"
+    model: "opencode/minimax-m2.5-free"
     teams: "engineering"
-    description: "200k context - great value ($0.30/1k)"
+    description: "200k context - free, strong coding"
   
   validation:
-    model: "opencode-go/minimax-m2.5"
+    model: "opencode/minimax-m2.5-free"
     teams: "validation"
-    description: "200k context - great value ($0.30/1k)"
+    description: "200k context - free, good for reviews"
 
 # ── Team Definitions ───────────────────────────────
 

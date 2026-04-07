@@ -6,16 +6,16 @@ Three-tier multi-team agent orchestration for opencode. Based on [IndyDevDan's "
 
 ```
 Orchestrator Lead
-├── Planning Team (Planning tier - mimo-v2-pro, 1M, $1/1k)
+├── Planning Team (Planning tier - qwen3.6-plus-free, 1M, Free)
 │   ├── Planning Lead
 │   ├── Planning Agent
 │   └── Plan Reviewer
-├── Engineering Team (Engineering tier - minimax-m2.5, 200k, $0.30/1k)
+├── Engineering Team (Engineering tier - minimax-m2.5-free, 200k, Free)
 │   ├── Engineering Lead
 │   ├── Frontend Dev
 │   ├── Backend Dev
 │   └── DevOps Specialist
-└── Validation Team (Validation tier - minimax-m2.5, 200k, $0.30/1k)
+└── Validation Team (Validation tier - minimax-m2.5-free, 200k, Free)
     ├── Validation Lead
     ├── Reviewer
     ├── Security Reviewer
@@ -67,7 +67,7 @@ use skill tool to load mt-review
 - Synthesize results from all teams
 - Final quality gate before delivery
 
-**Model:** Planning (mimo-v2-pro, 1M, $1/1k)
+**Model:** Planning (qwen3.6-plus-free, 1M, Free)
 
 ### Planning Team
 
@@ -77,7 +77,7 @@ use skill tool to load mt-review
 | planning-agent | Creates architecture/design |
 | plan-reviewer | Reviews plans for completeness |
 
-**Model:** Planning (mimo-v2-pro, 1M, $1/1k)
+**Model:** Planning (qwen3.6-plus-free, 1M, Free)
 
 ### Engineering Team
 
@@ -88,7 +88,7 @@ use skill tool to load mt-review
 | backend-dev | API/backend implementation |
 | devops-specialist | Infrastructure/deployment |
 
-**Model:** Engineering (minimax-m2.5, 200k, $0.30/1k)
+**Model:** Engineering (minimax-m2.5-free, 200k, Free)
 
 ### Validation Team
 
@@ -99,7 +99,7 @@ use skill tool to load mt-review
 | security-reviewer | Security audits |
 | qa-engineer | Test automation |
 
-**Model:** Validation (minimax-m2.5, 200k, $0.30/1k)
+**Model:** Validation (minimax-m2.5-free, 200k, Free)
 
 ## Skills
 
@@ -172,11 +172,11 @@ Domain knowledge per team:
 
 | Tier | Model | Context | Price | Use For |
 |------|-------|---------|-------|---------|
-| Planning | mimo-v2-pro (opencode-go) | 1M | $1/1k | Orchestrator, Planning, Architecture |
-| Engineering | minimax-m2.5 (opencode-go) | 200k | $0.30/1k | Engineering, Implementation |
-| Validation | minimax-m2.5 (opencode-go) | 200k | $0.30/1k | Code Review, QA, Security |
+| Planning | qwen3.6-plus-free (opencode) | 1M | Free | Orchestrator, Planning, Architecture |
+| Engineering | minimax-m2.5-free (opencode) | 200k | Free | Engineering, Implementation |
+| Validation | minimax-m2.5-free (opencode) | 200k | Free | Code Review, QA, Security |
 
-1M context for planning prevents compaction issues. Great value at ~$0.30-1/1k tokens.
+All free. 1M context for planning prevents compaction issues.
 
 ## Examples
 

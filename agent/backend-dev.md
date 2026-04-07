@@ -1,7 +1,7 @@
 ---
 description: >-
   Backend implementation specialist - writes clean, idiomatic backend code.
-model: opencode-go/minimax-m2.5
+model: opencode/minimax-m2.5-free
 mode: subagent
 tools:
   task: false
