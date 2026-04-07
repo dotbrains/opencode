@@ -1,7 +1,7 @@
 ---
 description: >-
   Validation team lead - coordinates QA, security review, and code review.
-model: opencode/minimax-m2.5-free
+model: opencode-go/minimax-m2.5
 mode: subagent
 tools:
   task: true

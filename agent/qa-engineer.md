@@ -1,7 +1,7 @@
 ---
 description: >-
   QA and test automation engineer - writes and executes tests.
-model: opencode/minimax-m2.5-free
+model: opencode-go/minimax-m2.5
 mode: subagent
 tools:
   task: false

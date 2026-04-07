@@ -9,7 +9,7 @@ description: >-
   user: "Build me a real-time collaboration system"
   assistant: "I'll use orchestrator to coordinate planning, engineering, and validation teams"
   </example>
-model: opencode/qwen3.6-plus-free
+model: opencode-go/mimo-v2-pro
 mode: primary
 ---
 <!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->

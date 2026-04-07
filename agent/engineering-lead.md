@@ -1,7 +1,7 @@
 ---
 description: >-
   Engineering team lead - coordinates implementation across frontend, backend, and DevOps.
-model: opencode/minimax-m2.5-free
+model: opencode-go/minimax-m2.5
 mode: subagent
 tools:
   task: true

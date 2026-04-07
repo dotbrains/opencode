@@ -1,7 +1,7 @@
 ---
 description: >-
   DevOps and infrastructure specialist - handles deployment, CI/CD, and infrastructure.
-model: opencode/minimax-m2.5-free
+model: opencode-go/minimax-m2.5
 mode: subagent
 tools:
   task: false

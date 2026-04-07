@@ -7,24 +7,19 @@
 
 model-tiers:
   planning:
-    model: "opencode/qwen3.6-plus-free"
+    model: "opencode-go/mimo-v2-pro"
     teams: "planning"
-    description: "1M context - great for architecture, reasoning"
+    description: "1M context - cheapest 1M model ($1/1k)"
   
   engineering:
-    model: "opencode/minimax-m2.5-free"
+    model: "opencode-go/minimax-m2.5"
     teams: "engineering"
-    description: "200k context - strong coding performance"
+    description: "200k context - great value ($0.30/1k)"
   
   validation:
-    model: "opencode/minimax-m2.5-free"
+    model: "opencode-go/minimax-m2.5"
     teams: "validation"
-    description: "200k context - good for reviews"
-  
-  compaction:
-    model: "opencode/qwen3.6-plus-free"
-    teams: "compaction"
-    description: "1M context - handles large sessions"
+    description: "200k context - great value ($0.30/1k)"
 
 # ── Team Definitions ───────────────────────────────
 

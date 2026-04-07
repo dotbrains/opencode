@@ -170,13 +170,13 @@ Domain knowledge per team:
 
 ## Model Tiers
 
-| Tier | Model | Context | Use For |
-|------|-------|---------|---------|
-| Planning | qwen3.6-plus-free | 1M | Orchestrator, Planning, Architecture |
-| Engineering | minimax-m2.5-free | 200k | Engineering, Implementation |
-| Validation | minimax-m2.5-free | 200k | Code Review, QA, Security |
+| Tier | Model | Context | Price | Use For |
+|------|-------|---------|-------|---------|
+| Planning | mimo-v2-pro (opencode-go) | 1M | $1/1k | Orchestrator, Planning, Architecture |
+| Engineering | minimax-m2.5 (opencode-go) | 200k | $0.30/1k | Engineering, Implementation |
+| Validation | minimax-m2.5 (opencode-go) | 200k | $0.30/1k | Code Review, QA, Security |
 
-Cost optimization: Use 1M context for planning to avoid compaction issues. Use 200k for coding (stronger at code generation).
+1M context for planning prevents compaction issues. Great value at ~$0.30-1/1k tokens.
 
 ## Examples
 
