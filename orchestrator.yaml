@@ -6,20 +6,25 @@
 # Higher tiers = more capable but more expensive.
 
 model-tiers:
-  high:
-    model: "opencode/minimax-m2.5-free"
-    teams: "orchestrator, planning"
-    description: "Complex reasoning, architecture, planning"
+  planning:
+    model: "opencode/qwen3.6-plus-free"
+    teams: "planning"
+    description: "1M context - great for architecture, reasoning"
   
-  medium:
+  engineering:
     model: "opencode/minimax-m2.5-free"
-    teams: "engineering, validation"
-    description: "Implementation, testing, code review"
+    teams: "engineering"
+    description: "200k context - strong coding performance"
   
-  low:
+  validation:
     model: "opencode/minimax-m2.5-free"
-    teams: "quick-lookup, simple-tasks"
-    description: "Lookups, formatting, classification"
+    teams: "validation"
+    description: "200k context - good for reviews"
+  
+  compaction:
+    model: "opencode/qwen3.6-plus-free"
+    teams: "compaction"
+    description: "1M context - handles large sessions"
 
 # ── Team Definitions ───────────────────────────────
 
@@ -31,7 +36,7 @@ teams:
       - backend-dev
       - devops-specialist
     description: "Full-stack engineering — implements features"
-    model-tier: medium
+    model-tier: engineering
 
   planning:
     lead: planning-lead
@@ -39,7 +44,7 @@ teams:
       - planning-agent
       - plan-reviewer
     description: "Architecture and planning — plans and critiques"
-    model-tier: high
+    model-tier: planning
 
   validation:
     lead: validation-lead
@@ -48,7 +53,7 @@ teams:
       - security-reviewer
       - qa-engineer
     description: "Quality assurance — reviews, security, testing"
-    model-tier: medium
+    model-tier: validation
 
 # ── Routing Rules ───────────────────────────────────
 

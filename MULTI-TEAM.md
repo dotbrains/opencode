@@ -170,12 +170,13 @@ Domain knowledge per team:
 
 ## Model Tiers
 
-| Tier | Model | Use For |
-|------|-------|---------|
-| HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
-| MEDIUM | minimax-m2.5-free | Engineering, Validation, Code Review |
+| Tier | Model | Context | Use For |
+|------|-------|---------|---------|
+| Planning | qwen3.6-plus-free | 1M | Orchestrator, Planning, Architecture |
+| Engineering | minimax-m2.5-free | 200k | Engineering, Implementation |
+| Validation | minimax-m2.5-free | 200k | Code Review, QA, Security |
 
-Cost optimization: don't pay for intelligence you don't need.
+Cost optimization: Use 1M context for planning to avoid compaction issues. Use 200k for coding (stronger at code generation).
 
 ## Examples
 
