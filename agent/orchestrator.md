@@ -9,7 +9,7 @@ description: >-
   user: "Build me a real-time collaboration system"
   assistant: "I'll use orchestrator to coordinate planning, engineering, and validation teams"
   </example>
-model: opencode/minimax-m2.5-free
+model: opencode/qwen3.6-plus-free
 mode: primary
 ---
 <!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
@@ -33,10 +33,13 @@ You (Orchestrator)
 
 ## Model Tiers
 
-| Tier | Model | Use For |
-|------|-------|---------|
-| HIGH | minimax-m2.5-free | Orchestrator, Planning, Architecture |
-| MEDIUM | minimax-m2.5-free | Engineering, Validation, Code Review |
+| Tier | Model | Context | Use For |
+|------|-------|---------|---------|
+| Planning | qwen3.6-plus-free | 1M | Orchestrator, Planning, Architecture |
+| Engineering | minimax-m2.5-free | 200k | Engineering, Implementation |
+| Validation | minimax-m2.5-free | 200k | Code Review, QA, Security |
+
+All free. 1M context for planning prevents compaction issues.
 
 Route tasks to appropriate team tiers based on complexity.
 
