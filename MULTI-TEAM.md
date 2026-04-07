@@ -6,16 +6,16 @@ Three-tier multi-team agent orchestration for opencode. Based on [IndyDevDan's "
 
 ```
 Orchestrator Lead
-├── Planning Team (HIGH tier)
+├── Planning Team (Planning tier - mimo-v2-pro, 1M, $1/1k)
 │   ├── Planning Lead
 │   ├── Planning Agent
 │   └── Plan Reviewer
-├── Engineering Team (MEDIUM tier)
+├── Engineering Team (Engineering tier - minimax-m2.5, 200k, $0.30/1k)
 │   ├── Engineering Lead
 │   ├── Frontend Dev
 │   ├── Backend Dev
 │   └── DevOps Specialist
-└── Validation Team (MEDIUM tier)
+└── Validation Team (Validation tier - minimax-m2.5, 200k, $0.30/1k)
     ├── Validation Lead
     ├── Reviewer
     ├── Security Reviewer
@@ -67,7 +67,7 @@ use skill tool to load mt-review
 - Synthesize results from all teams
 - Final quality gate before delivery
 
-**Model:** HIGH (minimax-m2.5-free)
+**Model:** Planning (mimo-v2-pro, 1M, $1/1k)
 
 ### Planning Team
 
@@ -77,7 +77,7 @@ use skill tool to load mt-review
 | planning-agent | Creates architecture/design |
 | plan-reviewer | Reviews plans for completeness |
 
-**Model:** HIGH (minimax-m2.5-free)
+**Model:** Planning (mimo-v2-pro, 1M, $1/1k)
 
 ### Engineering Team
 
@@ -88,7 +88,7 @@ use skill tool to load mt-review
 | backend-dev | API/backend implementation |
 | devops-specialist | Infrastructure/deployment |
 
-**Model:** MEDIUM (minimax-m2.5-free)
+**Model:** Engineering (minimax-m2.5, 200k, $0.30/1k)
 
 ### Validation Team
 
@@ -99,7 +99,7 @@ use skill tool to load mt-review
 | security-reviewer | Security audits |
 | qa-engineer | Test automation |
 
-**Model:** MEDIUM (minimax-m2.5-free)
+**Model:** Validation (minimax-m2.5, 200k, $0.30/1k)
 
 ## Skills
 
