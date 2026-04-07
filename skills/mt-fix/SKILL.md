@@ -50,17 +50,23 @@ First, understand the problem:
 
 ### Step 2 — Delegate to Engineering Lead
 
-Dispatch to `@engineering-lead` with:
+Inject debugging skill for root cause analysis:
 
 ```
 Fix this bug: [BUG DESCRIPTION]
+
+**Skill injection:** Use systematic-debugging skill to investigate:
+- Form hypothesis about root cause
+- Design test to verify
+- Iterate until root cause found
+- Then implement fix
 
 Investigate the root cause, then implement a fix.
 Delegate to frontend-dev or backend-dev as appropriate.
 
 Steps:
 1. Reproduce the bug if possible
-2. Identify the root cause
+2. Identify the root cause (use systematic-debugging)
 3. Implement the fix
 4. Verify the fix works
 
@@ -73,13 +79,18 @@ Return:
 
 ### Step 3 — Delegate to Validation Lead
 
-After the fix is implemented, dispatch to `@validation-lead` with:
+After the fix is implemented, inject verification skill:
 
 ```
 Verify this bug fix: [BUG DESCRIPTION]
 
 The engineering team has implemented a fix:
 [ENGINEERING RESULTS]
+
+**Skill injection:** Use verification-before-completion skill to:
+- Confirm original bug is fixed
+- Check for regressions
+- Verify test coverage
 
 Verify:
 1. The original bug is fixed

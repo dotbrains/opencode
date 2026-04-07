@@ -93,3 +93,45 @@ worktrees:
   enabled: true
   # Auto-cleanup after completion
   auto-cleanup: true
+
+# ── Dynamic Skill Injection ───────────────────────────────
+
+# Map task patterns to skills that should be injected
+skill-injection:
+  # Trigger phrases that indicate a skill should be used
+  triggers:
+    # Keywords → recommended skill
+    "build me": brainstorming
+    "create": brainstorming
+    "design": brainstorming
+    "implement": test-driven-development
+    "add feature": test-driven-development
+    "fix": systematic-debugging
+    "debug": systematic-debugging
+    "broken": systematic-debugging
+    "security": security-and-hardening
+    "auth": security-and-hardening
+    "complex": planning-and-task-breakdown
+    "refactor": code-simplification
+    "review": code-review-and-quality
+    "audit": mt-audit
+    
+  # Per-workflow default skills
+  workflow-defaults:
+    new-feature:
+      - brainstorming  # Explore idea before planning
+      - writing-plans   # Create implementation plan
+      - test-driven-development  # Implement with tests
+      - code-review-and-quality  # Review before merge
+      - finishing-a-development-branch  # Merge/cleanup
+    
+    bug-fix:
+      - systematic-debugging  # Find root cause
+      - verification-before-completion  # Verify fix
+    
+    security-audit:
+      - security-and-hardening  # Focused security review
+      - mt-audit
+    
+    code-review:
+      - code-review-and-quality

@@ -42,12 +42,14 @@ cd "~/.config/superpowers/worktrees/$project/$branch"
 
 ### Step 1 — Clarify Scope
 
-Determine what to audit:
+Determine what to audit and inject security skills:
 - Specific files/modules
 - Authentication/authorization
 - API endpoints
 - Dependencies
 - Full codebase
+
+**Skill injection:** Use security-and-hardening skill as primary framework for audit.
 
 ### Step 2 — Delegate to Validation Lead (Security Focus)
 
@@ -121,6 +123,7 @@ The audit should check:
 - **Consider context** — some issues are acceptable with mitigations
 - **Create worktree first** — always isolate before audit
 - **Cleanup after completion** — remove worktree when done
+- **Use security-and-hardening** — primary framework for audit
 
 ## Cleanup
 
