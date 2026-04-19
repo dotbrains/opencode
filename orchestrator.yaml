@@ -7,7 +7,7 @@
 
 model-tiers:
   planning:
-    model: "opencode/qwen3.6-plus-free"
+    model: "opencode-go/qwen3.6-plus"
     teams: "planning"
     description: "1M context - free, great for architecture"
   

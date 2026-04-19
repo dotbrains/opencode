@@ -6,7 +6,7 @@ Three-tier multi-team agent orchestration for opencode. Based on [IndyDevDan's "
 
 ```
 Orchestrator Lead
-├── Planning Team (Planning tier - qwen3.6-plus-free, 1M, Free)
+├── Planning Team (Planning tier - opencode-go/qwen3.6-plus, 1M, Free)
 │   ├── Planning Lead
 │   ├── Planning Agent
 │   └── Plan Reviewer
@@ -67,7 +67,7 @@ use skill tool to load mt-review
 - Synthesize results from all teams
 - Final quality gate before delivery
 
-**Model:** Planning (qwen3.6-plus-free, 1M, Free)
+**Model:** Planning (opencode-go/qwen3.6-plus, 1M, Free)
 
 ### Planning Team
 
@@ -77,7 +77,7 @@ use skill tool to load mt-review
 | planning-agent | Creates architecture/design |
 | plan-reviewer | Reviews plans for completeness |
 
-**Model:** Planning (qwen3.6-plus-free, 1M, Free)
+**Model:** Planning (opencode-go/qwen3.6-plus, 1M, Free)
 
 ### Engineering Team
 
@@ -172,7 +172,7 @@ Domain knowledge per team:
 
 | Tier | Model | Context | Price | Use For |
 |------|-------|---------|-------|---------|
-| Planning | qwen3.6-plus-free (opencode) | 1M | Free | Orchestrator, Planning, Architecture |
+| Planning | opencode-go/qwen3.6-plus (opencode) | 1M | Free | Orchestrator, Planning, Architecture |
 | Engineering | minimax-m2.5-free (opencode) | 200k | Free | Engineering, Implementation |
 | Validation | minimax-m2.5-free (opencode) | 200k | Free | Code Review, QA, Security |
 

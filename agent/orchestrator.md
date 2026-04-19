@@ -9,7 +9,7 @@ description: >-
   user: "Build me a real-time collaboration system"
   assistant: "I'll use orchestrator to coordinate planning, engineering, and validation teams"
   </example>
-model: opencode/qwen3.6-plus-free
+model: opencode-go/qwen3.6-plus
 mode: primary
 ---
 <!-- DO NOT EDIT — assembled from shared/ and frontmatter/ by assemble.sh -->
@@ -35,11 +35,11 @@ You (Orchestrator)
 
 | Tier | Model | Context | Use For |
 |------|-------|---------|---------|
-| Planning | qwen3.6-plus-free | 1M | Orchestrator, Planning, Architecture |
-| Engineering | minimax-m2.5-free | 200k | Engineering, Implementation |
-| Validation | minimax-m2.5-free | 200k | Code Review, QA, Security |
+| Planning | opencode-go/qwen3.6-plus | 1M | Orchestrator, Planning, Architecture |
+| Engineering | opencode/minimax-m2.5-free | 200k | Engineering, Implementation |
+| Validation | opencode/minimax-m2.5-free | 200k | Code Review, QA, Security |
 
-All free. 1M context for planning prevents compaction issues.
+qwen3.6-plus has 1M context for planning without compaction. minimax-m2.5-free is cost-effective for implementation.
 
 Route tasks to appropriate team tiers based on complexity.
 

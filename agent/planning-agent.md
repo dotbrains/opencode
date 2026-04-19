@@ -2,7 +2,7 @@
 description: >-
   High-level technical design and architectural decisions.
   Produces design documents, pattern selections, and structural recommendations.
-model: opencode/qwen3.6-plus-free
+model: opencode-go/qwen3.6-plus
 mode: subagent
 tools:
   bash: false
