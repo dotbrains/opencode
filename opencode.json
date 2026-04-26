@@ -29,6 +29,16 @@
     "context-mode": {
       "type": "local",
       "command": ["context-mode"]
+    },
+    "linear": {
+      "type": "remote",
+      "url": "https://mcp.linear.app/mcp",
+      "enabled": true
+    },
+    "notion": {
+      "type": "remote",
+      "url": "https://mcp.notion.com/mcp",
+      "enabled": true
     }
   },
   "plugin": ["context-mode", "superpowers@git+https://github.com/obra/superpowers.git", "@warp-dot-dev/opencode-warp", "opencode-swarm"],
