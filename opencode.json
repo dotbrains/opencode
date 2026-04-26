@@ -41,6 +41,6 @@
       "enabled": true
     }
   },
-  "plugin": ["context-mode", "superpowers@git+https://github.com/obra/superpowers.git", "@warp-dot-dev/opencode-warp"],
+  "plugin": ["context-mode", "superpowers@git+https://github.com/obra/superpowers.git", "@warp-dot-dev/opencode-warp", "opencode-swarm"],
   "instructions": ["rules/no-coauthor.md", "rules/cli-projects.md", "rules/concise.md"]
 }
