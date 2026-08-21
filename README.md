@@ -67,18 +67,6 @@ git submodule update --remote shared
 ./shared/assemble.sh opencode
 ```
 
-## Fallback Commands (Notion + Linear)
-
-If your workspace blocks MCP OAuth flows, this config includes local fallback slash commands:
-
-- Notion: `command/notion-search.md`, `command/notion-page.md` (powered by `@dotbrains/notion-cli`)
-- Linear: `command/linear-search.md`, `command/linear-issue.md` (powered by `@dotbrains/linear-cli`)
-
-Setup and usage instructions are documented in `PLUGINS.md` under:
-
-- **Linear → Fallback: linear-cli (when MCP auth is blocked)**
-- **Notion → Fallback: notion-cli (when MCP auth is blocked)**
-
 ## Multi-Team Orchestration
 
 This config includes a three-tier multi-team system for opencode. Based on [IndyDevDan's "One Agent Is NOT ENOUGH"](https://www.youtube.com/watch?v=M30gp1315Y4).
