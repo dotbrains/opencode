@@ -55,8 +55,6 @@ This installs:
 - `context-mode` - MCP server for context management
 - `superpowers` - Complete software development workflow (via plugin in opencode.json)
 - `get-shit-done` - GSD workflow system (via npx)
-- `@dotbrains/linear-cli` - Fallback CLI for Linear
-- `@dotbrains/notion-cli` - Fallback CLI for Notion
 
 ## Shared Agent Definitions
 
