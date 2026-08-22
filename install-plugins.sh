@@ -23,6 +23,11 @@ echo "superpowers is configured in opencode.json (no install needed)"
 echo "Installing get-shit-done..."
 npx get-shit-done-cc@latest --opencode --global
 
+# ntn - Official Notion CLI, fallback for Notion when MCP auth is blocked
+echo "Installing ntn (official Notion CLI)..."
+npm install -g ntn
+echo "Run 'ntn login' to authorize your Notion workspace."
+
 echo ""
 echo "Done! Restart opencode to load the plugins."
 echo ""

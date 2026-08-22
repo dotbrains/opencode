@@ -55,6 +55,7 @@ This installs:
 - `context-mode` - MCP server for context management
 - `superpowers` - Complete software development workflow (via plugin in opencode.json)
 - `get-shit-done` - GSD workflow system (via npx)
+- [`ntn`](https://developers.notion.com/cli/get-started/overview) - Official Notion CLI, fallback for Notion
 
 ## Shared Agent Definitions
 
@@ -64,6 +65,16 @@ Agent and skill body content is shared with [Claude Code](https://github.com/dot
 git submodule update --remote shared
 ./shared/assemble.sh opencode
 ```
+
+## Fallback Commands (Notion)
+
+If your workspace blocks MCP OAuth flows, this config includes local fallback slash commands:
+
+- Notion: `command/notion-search.md`, `command/notion-page.md` (powered by [`ntn`](https://developers.notion.com/cli/get-started/overview), the official Notion CLI)
+
+Setup and usage instructions are documented in `PLUGINS.md` under:
+
+- **Notion CLI (ntn)**
 
 ## Multi-Team Orchestration
 
