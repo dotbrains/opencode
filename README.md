@@ -27,7 +27,7 @@ brew install anomalyco/tap/opencode
 - `agent/` - Agent configuration (assembled from shared + frontmatter)
 - `command/` - Command definitions
 - `skills/` - Skill configuration (assembled from shared + frontmatter)
-- `shared/` - Shared AI config submodule ([dotbrains/shared-ai-config](https://github.com/dotbrains/shared-ai-config))
+- `shared/` - Shared AI config submodule ([smeltery/shared-ai-config](https://github.com/smeltery/shared-ai-config))
 - `frontmatter/` - OpenCode-specific YAML frontmatter for agents and skills
 - `rules/` - Instruction files loaded as system-level rules
 - `PLUGINS.md` - External MCP servers and plugins ([details](PLUGINS.md))
@@ -40,7 +40,7 @@ brew install anomalyco/tap/opencode
 The contents of this repository should be placed in your `$HOME/.config`.
 
 ```bash
-git clone --recursive https://github.com/dotbrains/opencode.git $HOME/.config/opencode
+git clone --recursive https://github.com/smeltery/opencode.git $HOME/.config/opencode
 ```
 
 ### Install Plugins
@@ -59,7 +59,7 @@ This installs:
 
 ## Shared Agent Definitions
 
-Agent and skill body content is shared with [Claude Code](https://github.com/dotbrains/claude) via the [shared-ai-config](https://github.com/dotbrains/shared-ai-config) submodule. To update after shared content changes:
+Agent and skill body content is shared with [Claude Code](https://github.com/smeltery/claude) via the [shared-ai-config](https://github.com/smeltery/shared-ai-config) submodule. To update after shared content changes:
 
 ```bash
 git submodule update --remote shared
